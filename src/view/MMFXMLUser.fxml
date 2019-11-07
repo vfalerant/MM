@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="419.0" prefWidth="984.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MMFXMLUserController">
+    <children>
+        <GridPane id="paneSearchUser" fx:id="paneSearchUser" layoutX="1.0" prefHeight="90.0" prefWidth="983.0">
+          <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="125.0" text="Keresés:" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+              <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" minHeight="16" minWidth="69" prefHeight="21.0" prefWidth="116.0" text="Felhasználónév" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label fx:id="label1" alignment="CENTER" layoutX="256.0" layoutY="15.0" minHeight="16" minWidth="69" prefHeight="21.0" prefWidth="94.0" text="E-mail cím" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <TextField id="fieldUsernameSearch" fx:id="fieldUsernameSearch" prefHeight="31.0" prefWidth="190.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField id="fieldEmailSearch" fx:id="fieldEmailSearch" layoutX="271.0" layoutY="62.0" prefHeight="31.0" prefWidth="190.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <Button id="searchUser" fx:id="searchUser" onAction="#handleButtonSearchUser" text="Keresés..." GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </GridPane>
+      <TableView id="tableUsers" fx:id="tableUsers" editable="true" layoutX="1.0" layoutY="112.0" prefHeight="231.0" prefWidth="983.0">
+          <placeholder>
+              <Label text="Nincs adat a táblázatban"/>
+          </placeholder>
+      </TableView>
+      <HBox id="buttonrowUsers" fx:id="buttonrowUsers" layoutX="1.0" layoutY="343.0" prefHeight="48.0" prefWidth="983.0" spacing="25.0">
+         <children>
+            <Button id="buttonNewUser" fx:id="buttonNewUser" mnemonicParsing="false" onAction="#handleButtonNewUser" text="Új felhasználó..." />
+            <Button id="buttonDeleteUser" fx:id="buttonDeleteUser" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleButtonDeleteUser" text="Felhasználó törlés" />
+         </children>
+         <padding>
+            <Insets left="25.0" top="10.0" />
+         </padding>
+      </HBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="mainPane" fx:id="mainPane" prefHeight="535.0" prefWidth="983.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MMFXMLDocumentController">
+    <children>
+      <MenuBar id="menuBar" fx:id="menuBar" prefHeight="32.0" prefWidth="999.0" visible="false">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem id="menuitemClose" fx:id="menuitemClose" mnemonicParsing="false" onAction="#handleMenuitemClose" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu id="menuUserMaintenance" fx:id="menuUserMaintenance" mnemonicParsing="false" onShowing="#handleMenuUserMaintenanceShowing" text="Felhasználó karbantartás">
+            <items>
+              <MenuItem id="menuitemShowUsers" fx:id="menuitemShowUsers" mnemonicParsing="false" onAction="#handleMenuShowUsers" text="Felhasználók megjelenítése" />
+              <MenuItem id="menuitemNewUser" fx:id="menuitemNewUser" mnemonicParsing="false" onAction="#handleMenuNewUser" text="Új felhasználó..." />
+              <MenuItem id="menuitemDeleteUser" fx:id="menuitemDeleteUser" mnemonicParsing="false" onAction="#handleMenuDeleteUser" text="Felhasználó törlés" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label id="mainLabel" fx:id="mainLabel" alignment="CENTER" contentDisplay="CENTER" layoutY="40.0" prefHeight="40.0" prefWidth="999.0" text="Főcím" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <AnchorPane id="contentPane" fx:id="contentPane" layoutY="78.0" prefHeight="462.0" prefWidth="1008.0">
+         <children>
+            <fx:include fx:id="newuser" source="MMFXMLNewUser.fxml" />
+         </children></AnchorPane>
+    </children>
+</AnchorPane>
